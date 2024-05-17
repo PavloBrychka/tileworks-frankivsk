@@ -1,0 +1,163 @@
+.container {
+    width: 100vw;
+    height: 230vh;
+    background-color: black;
+    /* overflow-y: scroll; */
+
+    overflow: hidden;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.card {
+    height: 25%;
+    width: 40%;
+    overflow: hidden;
+    border-radius: 20px;
+    display: inline-block;
+    justify-content: center;
+    margin: 5%;
+}
+@media screen and (max-width: 600px) {
+    .card{
+        height: 12%;
+        width: 90%;
+    }
+    .block{
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.block {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all .1s ease;
+    border-radius: 20px;
+    opacity: 0.5;
+    background-repeat: no-repeat;
+    background-size: cover;
+    white-space: nowrap;
+    background-position: center;
+    transition: opacity 0.1s ease, transform 1s ease-in-out; /* Додали окремий transition для transform */
+}
+
+.block:hover {
+    /* height: 120%;
+    width: 120%;
+    opacity: 1;
+    animation: zoom-in 0.5s ease-in-out forwards;
+    transform-origin: center; /* Додаємо transform-origin для фіксації положення тексту */
+    transform: scale(1.2); /* Змінили анімацію на scale, щоб полегшити роботу браузера */
+    opacity: 1;
+}
+.block:hover p{
+    opacity: 1;
+}
+
+
+.text {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.textContainer{
+    /* display: inline; */
+    /* position: relative; */
+    overflow: hidden;
+}
+.text div p{
+
+    position: fixed; /* Зафіксовуємо текст відносно вікна браузера */
+    top: 50%; /* Вирівнюємо текст по вертикалі на 50% відносно вікна браузера */
+    left: 30%; /* Вирівнюємо текст по горизонталі на 50% відносно вікна браузера */
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    color: rgba(253, 194, 0, 0.966);
+    /* margin-top: 30%; */
+    font-size: 0.8vw;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 0;
+    max-width: 200px;
+}
+@media screen and (max-width: 1400px) {
+    .text div p {
+        font-size: 15px;
+    }
+    .block .text h1{
+        font-size: 2vw;
+    }
+   
+  }
+  @media screen and (max-width: 600px) {
+
+     .text div p {
+        font-size: 10px;
+    }
+    .block .text h1{
+        font-size: 30px;
+    }
+  }
+  @media screen and (max-height: 600px) {
+
+    .text div p {
+       font-size: 8px;
+       
+   }
+ }
+
+.block .text h1 {
+    text-align: center;
+    color: gold;
+    bottom: 50%;
+    left: 10%;
+    position: absolute;
+    font-size: 2vw;
+}
+.block:hover .text h1{
+    opacity: 0;
+}
+
+/* .block .text input {
+    background-color: transparent;
+    border: 0px;
+    cursor: pointer;
+    color: gold;
+    font-size: x-large;
+    animation: details 2s infinite;
+    text-align: center;
+    transition: all 1s ease;
+} */
+
+/* .block .text input:hover {
+    opacity: 1;
+    animation: none;
+    border: 2px;
+    color: red;
+} */
+
+@keyframes zoom-in {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+/* @keyframes details {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
+    }
+} */

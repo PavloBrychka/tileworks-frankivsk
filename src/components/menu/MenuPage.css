@@ -1,0 +1,67 @@
+
+.horizontal-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #383535; 
+  padding: 10px;
+  font-family: Arial, sans-serif; 
+  margin-top: 30px;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: all .2s ease;
+  position: fixed;
+  width: 100%;
+  /* overflow-x: hidden; */
+}
+.horizontal-menu:hover{
+  opacity: 0.8;
+}
+
+.horizontal-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  border: 2px solid transparent; /* Початкове підкреслення */
+}
+
+.horizontal-menu ul li {
+  margin-right: 20px;
+}
+
+.horizontal-menu ul li:last-child {
+  margin-right: 0;
+}
+
+.horizontal-menu ul li a {
+  text-decoration: none;
+  color: #ecda33; /* Колір тексту */
+  transition: color 0.3s ease;
+}
+.horizontal-menu ul li a:active {
+  border-bottom-color: #ffffff; /* Колір підкреслення при натисканні */
+}
+.horizontal-menu ul li a:hover {
+  color: #ffffff; /* Колір тексту при наведенні */
+}
+
+.logo {
+  background-color: transparent; /* Фон білого кольору */
+  padding: 10px;
+  /* border: 1px solid #000000; Рамка */
+  border-radius: 5px;
+  font-weight: bold;
+ 
+}
+.logo img{
+  height: 8vh;
+  width: 6vw;
+}
+
+/* Медіа-запит для пристроїв з максимальною шириною екрану 600px */
+@media screen and (max-width: 600px) {
+  .logo {
+      display: none; /* Приховати логотип на малих пристроях */
+  }
+}
