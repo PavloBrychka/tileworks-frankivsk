@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-scroll';
-import './MenuPage.css'; // Стилі можна додати у відповідний файл CSS
+import './MenuPage.css';
 
 const MenuPage = () => {
   const [activeMenu, setActiveMenu] = useState('');
@@ -10,12 +10,21 @@ const MenuPage = () => {
   };
 
   return (
-    <div className='horizontal-menu-main'>
-
-    
     <nav className="horizontal-menu">
-       
       <ul>
+      <li>
+          <Link
+            activeClass="active"
+            to="mainpage"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            onClick={() => handleMenuClick('phone')}
+          >
+             Головна
+          </Link>
+        </li>
         <li>
           <Link
             activeClass="active"
@@ -52,10 +61,10 @@ const MenuPage = () => {
             duration={500}
             onClick={() => handleMenuClick('phone')}
           >
-            Телефон
+             Напишіть нам
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link
             activeClass="active"
             to="prices"
@@ -65,15 +74,15 @@ const MenuPage = () => {
             duration={500}
             onClick={() => handleMenuClick('prices')}
           >
-            Ціни
+            Напишіть нам
           </Link>
-        </li>
+        </li> */}
       </ul>
+      
       <div className="logo">
-        <img src="/assets/logo.png" alt="" />
+        <img src="/assets/logo.png" alt="Logo" />
       </div>
     </nav>
-    </div>
   );
 };
 

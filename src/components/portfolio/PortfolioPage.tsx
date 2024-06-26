@@ -83,6 +83,8 @@ const PortfolioPage = () => {
   }, []);
 
   return (
+    
+    
     <div className="swiper-main">
     <div className="swiper-container" {...handlers}>
       <div className="swiper-wrapper">
@@ -97,6 +99,7 @@ const PortfolioPage = () => {
       <div className="swiper-pagination" />
     </div>
     </div>
+   
   );
 };
 

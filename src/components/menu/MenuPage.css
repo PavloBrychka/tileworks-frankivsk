@@ -1,3 +1,11 @@
+.horizontal-menu-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
 
 .horizontal-menu {
   display: flex;
@@ -12,9 +20,10 @@
   transition: all .2s ease;
   position: fixed;
   width: 100%;
-  /* overflow-x: hidden; */
+  z-index: 1000;
 }
-.horizontal-menu:hover{
+
+.horizontal-menu:hover {
   opacity: 0.8;
 }
 
@@ -23,7 +32,7 @@
   margin: 0;
   padding: 0;
   display: flex;
-  border: 2px solid transparent; /* Початкове підкреслення */
+  border: 2px solid transparent;
 }
 
 .horizontal-menu ul li {
@@ -36,32 +45,35 @@
 
 .horizontal-menu ul li a {
   text-decoration: none;
-  color: #ecda33; /* Колір тексту */
+  color: #ecda33;
   transition: color 0.3s ease;
 }
+
 .horizontal-menu ul li a:active {
-  border-bottom-color: #ffffff; /* Колір підкреслення при натисканні */
+  border-bottom-color: #ffffff;
 }
+
 .horizontal-menu ul li a:hover {
-  color: #ffffff; /* Колір тексту при наведенні */
+  color: #ffffff;
 }
 
 .logo {
-  background-color: transparent; /* Фон білого кольору */
+  background-color: transparent;
   padding: 10px;
-  /* border: 1px solid #000000; Рамка */
   border-radius: 5px;
   font-weight: bold;
- 
+  
 }
-.logo img{
-  height: 8vh;
-  width: 6vw;
+
+.logo img {
+  height: 7vh;
+  width: 7vw;
+  margin-left: 15px;
 }
 
 /* Медіа-запит для пристроїв з максимальною шириною екрану 600px */
 @media screen and (max-width: 600px) {
   .logo {
-      display: none; /* Приховати логотип на малих пристроях */
+    display: none;
   }
 }

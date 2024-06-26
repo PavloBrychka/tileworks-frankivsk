@@ -7,6 +7,7 @@ const InfoPage = () =>
 
     return(
         <>
+      
                 <div className="container">
 
 
@@ -148,7 +149,7 @@ const InfoPage = () =>
 
         
           </div>
-            
+         
         </>
     );
 }

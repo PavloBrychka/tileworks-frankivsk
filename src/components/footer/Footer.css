@@ -9,17 +9,27 @@
 
 
 }
-.footercontaier h1{
+p{
     text-align: center;
-    display: inline-block;
+    font-size: 1vw;
+    margin-top: 1%;
 
-
+}
+p button{
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    border: 0cap;
+    font-size: 1vw;
+}
+p button:hover{
+    color: orange;
 }
 img{
     height: 2vw;
     width: 2vw;
-    margin-left: 20%;
-    margin-top: 5%;
+    margin-left: 1%;
+    
 }
 @media screen and (max-width: 600px) {
     .containerfooter{
